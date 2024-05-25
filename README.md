@@ -24,7 +24,7 @@
 ## Pokretanje aplikacija
 1. Kloniranje repozitorija
   ```
-  https://github.com/sehakespeare/RSII-eKino.git
+  https://github.com/53H4/RSII-eKino2024.git
   ```
 2. Otvoriti klonirani repozitorij u konzoli
 3. Pokretanje dokerizovanog API-ja i DB-a
