@@ -1,6 +1,8 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:e_kino_mobile/main.dart';
+import 'package:e_kino_mobile/screens/projections/upcoming_projections_screen.dart';
+import 'package:e_kino_mobile/screens/reservations/reservations_list_user_screen.dart';
 import 'package:e_kino_mobile/screens/user_profile/profile_settings_customer_screen.dart';
 import 'package:e_kino_mobile/utils/util.dart';
 import 'package:flutter/material.dart';
@@ -23,13 +25,13 @@ class _MasterScreenWidgetState extends State<MasterScreenWidget> {
       currentIndex = index;
     });
     if (currentIndex == 0) {
-      // Navigator.of(context).push(MaterialPageRoute(
-      //   builder: (context) => const UpcomingProjectionsScreen(),
-      // ));
+      Navigator.of(context).push(MaterialPageRoute(
+        builder: (context) => const UpcomingProjectionsScreen(),
+      ));
     } else if (currentIndex == 1) {
-      // Navigator.of(context).push(MaterialPageRoute(
-      //   builder: (context) => const ReservationsListScreen(),
-      // ));
+      Navigator.of(context).push(MaterialPageRoute(
+        builder: (context) => const ReservationsListUserScreen(),
+      ));
     } else if (currentIndex == 2) {
       // Navigator.of(context).push(MaterialPageRoute(
       //   builder: (context) => const RatingsListScreen(),

@@ -57,8 +57,7 @@ abstract class BaseProvider<T> with ChangeNotifier {
 
       var result = SearchResult<T>();
 
-      result.count = data['count'];
-      for (var item in data['result']) {
+      for (var item in data) {
         result.result.add(fromJson(item));
       }
 

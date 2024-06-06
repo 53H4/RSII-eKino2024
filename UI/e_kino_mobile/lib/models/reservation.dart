@@ -6,9 +6,9 @@ class Reservation {
   int? reservationId;
   int? userId;
   int? projectionId;
-  String? row;
-  String? column;
-  String? numTicket;
+  int? row;
+  int? column;
+  int? numTickets;
 
   Reservation(
     this.reservationId,
@@ -16,10 +16,9 @@ class Reservation {
     this.projectionId,
     this.row,
     this.column,
-    this.numTicket,
+    this.numTickets,
   );
 
-  factory Reservation.fromJson(Map<String, dynamic> json) =>
-      _$ReservationFromJson(json);
+  factory Reservation.fromJson(Map<String, dynamic> json) => _$ReservationFromJson(json);
   Map<String, dynamic> toJson() => _$ReservationToJson(this);
 }
