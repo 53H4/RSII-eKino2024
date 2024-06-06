@@ -12,5 +12,7 @@ namespace eKino.Services.Interfaces
     public interface IUserService : ICRUDService<User, UserSearchObject, UserInsertRequest, UserUpdateRequest>
     {
         User? Login(string username, string password);
+
+        Task<User?> GetUserByUsername(string username);
     }
 }

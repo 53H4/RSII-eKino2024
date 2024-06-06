@@ -15,6 +15,8 @@ namespace eKino.Services.Implementations
 {
     public class UserService : BaseCRUDService<Model.User, Database.User, UserSearchObject, UserInsertRequest, UserUpdateRequest>, IUserService
     {
+
+
         public UserService(eKinoContext context, IMapper mapper) : base(context, mapper)
         {
         }
@@ -171,5 +173,11 @@ namespace eKino.Services.Implementations
 
             return Mapper.Map<Model.User>(entity);
         }
+        public async Task<Model.User?> GetUserByUsername(string username)
+        {
+            var userEntity = await Context.Users.FirstOrDefaultAsync(u => u.Username == username);
+            return userEntity != null ? Mapper.Map<Model.User>(userEntity) : null;
+        }
+
     }
 }
